@@ -13,9 +13,19 @@
         src="./Assets/img/oGozo-logo.png"
         alt="Logo de Gozo"
       />
-      <div class="header__form" >
-        <form class="form__fieldset" action="https://formsubmit.co/niveisreformed@gmail.com" method="POST">
-          <input type="email" name="email" class="fieldset__email" type="text" placeholder="Ingresa tu correo electrónico" />
+      <div class="header__form">
+        <form
+          class="form__fieldset"
+          action="https://formsubmit.co/niveisreformed@gmail.com"
+          method="POST"
+        >
+          <input
+            type="email"
+            name="email"
+            class="fieldset__email"
+            type="text"
+            placeholder="Ingresa tu correo electrónico"
+          />
           <button class="header__button--send">
             <img
               class="button__img--send"
@@ -33,17 +43,22 @@
           />
           <p class="button__p">Avísame</p>
         </button>
-    </div>
+      </div>
     </header>
     <main class="main">
       <div class="container">
         <div class="info">
-          <h1 class="info__h1">Próximamente</h1>
+          <h1 id="info__h1" class="info__h1">Próximamente</h1>
           <div class="info__container">
             <p class="info__p">
               CICLO DE CONCIERTOS INTERNACIONALES EN GALICIA
             </p>
-            <button class="info__buy">COMPRAR ENTRADA</button>
+            <a
+              href="https://www.livenation.es/event/o-gozo-festival-presenta-david-guetta-guests-santiago-de-compostela-tickets-edp1559333"
+              class="info__buy"
+              id="info__buy"
+              >COMPRAR ENTRADA</a
+            >
           </div>
           <div class="date">
             <div class="days">
@@ -75,14 +90,16 @@
       </div>
     </main>
     <footer class="footer">
-      <p class="footer__p">Copyright 2023 &copy; LIVE NATION ESPAÑA, S.A.U.</p>
+      <p class="footer__p">
+        &copy; 2025 Rediseño técnico por Jonathan Saavedra. Sin afiliación con
+        LIVE NATION ESPAÑA, S.A.U.
+      </p>
       <div class="socials">
         <a href=""><img src="./Assets/Icons/yt_icon.svg" alt="" /></a>
         <a href=""><img src="./Assets/Icons/fb_icon.svg" alt="" /></a>
         <a href=""><img src="./Assets/Icons/ig_icon.svg" alt="" /></a>
       </div>
     </footer>
-
 
     <script src="script.js"></script>
   </body>

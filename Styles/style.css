@@ -24,13 +24,11 @@
 }
 
 body {
-  background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
+  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
     url(../Assets/img/Gozo25-fondo.png) lightgray 50% / cover no-repeat;
   background-size: cover;
   color: var(--primary-font-color);
   -webkit-font-smoothing: antialiased;
-  height: 100vh;
-  overflow-y: hidden;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -47,6 +45,11 @@ button {
   cursor: pointer;
   background-color: transparent;
   border: none;
+  color: var(--primary-font-color);
+}
+
+a{
+  text-decoration: none;
   color: var(--primary-font-color);
 }
 
@@ -123,6 +126,31 @@ button {
   animation: left 0.3s linear forwards;
   background-color: var(--button-color);
   z-index: 2;
+  &:hover {
+    .button__img--send {
+      animation: send 0.6s linear forwards;
+    }
+  }
+}
+
+@keyframes send {
+  50%{
+    top: -40px;
+    left: 50%;
+    transform: rotate(40deg);
+  }
+  100%{
+    top: 50%;
+    left: 70%;
+    transform: rotate(90deg) translateX(-55%);
+  }
+}
+
+.button__img--send {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-60%);
+  left: 15%;
 }
 
 .fieldset__email{
@@ -143,32 +171,6 @@ button {
     100%{
         right: -1px;
     }
-}
-
-.button__img--send {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-60%);
-  left: 15%;
-}
-
-.header__button--send:hover {
-  .button__img--send {
-    animation: send 0.6s linear forwards;
-  }
-}
-
-@keyframes send {
-  50% {
-    top: -40px;
-    left: 50%;
-    transform: rotate(40deg);
-  }
-  100% {
-    top: 50%;
-    left: 70%;
-    transform: rotate(90deg) translateX(-55%);
-  }
 }
 
 .button__p {
@@ -207,7 +209,9 @@ button {
 }
 
 .footer__p {
-  color: var(--footer-font-color);
+  color: var(--secondary-font-color);
+  display: flex;
+  align-items: center;
 }
 
 .date {
@@ -265,4 +269,9 @@ button {
 .separator {
   align-self: first baseline;
   padding-top: 27px;
+}
+
+.socials{
+  display: flex;
+  align-items: center;
 }
