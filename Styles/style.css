@@ -1,0 +1,268 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-font-color: white;
+  --secondary-font-color: #adadad;
+  --bg-color: black;
+  --button-color: #0caea5;
+  --footer-font-color: #676c6c;
+}
+
+@font-face {
+  font-family: Poppins;
+  src: url(../Fonts/Poppins-Regular.ttf);
+}
+
+@font-face {
+  font-family: Poppins-Bold;
+  src: url(../Fonts/Poppins-Bold.ttf);
+}
+
+body {
+  background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
+    url(../Assets/img/Gozo25-fondo.png) lightgray 50% / cover no-repeat;
+  background-size: cover;
+  color: var(--primary-font-color);
+  -webkit-font-smoothing: antialiased;
+  height: 100vh;
+  overflow-y: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+body,
+input,
+button {
+  font-size: 14px;
+  font-family: Poppins;
+}
+
+button {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  color: var(--primary-font-color);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 35px 150px;
+}
+
+.header__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 226px;
+  height: 78px;
+  border: 1px solid var(--primary-font-color);
+  transition: 0.6s;
+  z-index: 3;
+}
+
+.header__form {
+  display: flex;
+}
+
+.form__fieldset {
+    display: none;
+    border: none;
+    position: relative;
+}
+
+.header__form input {
+  background-color: transparent;
+  border: 1px solid var(--primary-font-color);
+  width: 250px;
+  padding: 0px 20px;
+  color: var(--primary-font-color);
+}
+
+.header__button:hover {
+  background-color: var(--button-color);
+  .button__img {
+    animation: shake 0.2s linear infinite;
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(-20deg);
+  }
+  50% {
+    transform: rotate(20deg);
+  }
+  100% {
+    transform: rotate(-20deg);
+  }
+}
+
+.header__button--send {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 226px;
+  height: 78px;
+  border: 1px solid var(--primary-font-color);
+  transition: 0.6s;
+  position: relative;
+  overflow: hidden;
+  position: absolute;
+  right: -225px;
+  animation: left 0.3s linear forwards;
+  background-color: var(--button-color);
+  z-index: 2;
+}
+
+.fieldset__email{
+    position: absolute;
+    left: -24px;
+    height: 78px;
+    animation: leftleft 1s linear forwards;
+    z-index: 1;
+}
+
+@keyframes leftleft {
+    100%{
+        left: -474px;
+    }
+}
+
+@keyframes left {
+    100%{
+        right: -1px;
+    }
+}
+
+.button__img--send {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-60%);
+  left: 15%;
+}
+
+.header__button--send:hover {
+  .button__img--send {
+    animation: send 0.6s linear forwards;
+  }
+}
+
+@keyframes send {
+  50% {
+    top: -40px;
+    left: 50%;
+    transform: rotate(40deg);
+  }
+  100% {
+    top: 50%;
+    left: 70%;
+    transform: rotate(90deg) translateX(-55%);
+  }
+}
+
+.button__p {
+  color: #fff;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.container {
+  display: flex;
+  width: 1572px;
+  height: 648px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.container__poster {
+  width: 464px;
+}
+
+.main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 59px 150px;
+}
+
+.footer__p {
+  color: var(--footer-font-color);
+}
+
+.date {
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.date__num {
+  font-family: Poppins-Bold;
+  font-size: 60px;
+}
+
+.date__p {
+  font-size: 20px;
+}
+
+.info {
+  width: 800px;
+  height: 479px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.info__h1 {
+  font-size: 85px;
+}
+
+.info__p {
+  color: var(--secondary-font-color);
+}
+
+.info__buy {
+  background-color: var(--button-color);
+  width: 360px;
+  height: 40px;
+  font-size: 30px;
+  font-weight: 900;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info__container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.separator {
+  align-self: first baseline;
+  padding-top: 27px;
+}

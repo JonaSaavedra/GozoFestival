@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./Styles/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <img
+        class="header__logo"
+        src="./Assets/img/oGozo-logo.png"
+        alt="Logo de Gozo"
+      />
+      <div class="header__form" >
+        <form class="form__fieldset" action="https://formsubmit.co/niveisreformed@gmail.com" method="POST">
+          <input type="email" name="email" class="fieldset__email" type="text" placeholder="Ingresa tu correo electrónico" />
+          <button class="header__button--send">
+            <img
+              class="button__img--send"
+              src="./Assets/Icons/send.svg"
+              alt=""
+            />
+            <p id="" class="button__p">ENVIAR</p>
+          </button>
+        </form>
+        <button onclick="notify()" class="header__button">
+          <img
+            class="button__img"
+            src="./Assets/Icons/campana_icon.svg"
+            alt=""
+          />
+          <p class="button__p">Avísame</p>
+        </button>
+    </div>
+    </header>
+    <main class="main">
+      <div class="container">
+        <div class="info">
+          <h1 class="info__h1">Próximamente</h1>
+          <div class="info__container">
+            <p class="info__p">
+              CICLO DE CONCIERTOS INTERNACIONALES EN GALICIA
+            </p>
+            <button class="info__buy">COMPRAR ENTRADA</button>
+          </div>
+          <div class="date">
+            <div class="days">
+              <p class="date__num">00</p>
+              <p class="date__p">Días</p>
+            </div>
+            <img class="separator" src="./Assets/Icons/separator.svg" alt="" />
+            <div class="hours">
+              <p class="date__num">00</p>
+              <p class="date__p">Horas</p>
+            </div>
+            <img class="separator" src="./Assets/Icons/separator.svg" alt="" />
+            <div class="minutes">
+              <p class="date__num">00</p>
+              <p class="date__p">Minutos</p>
+            </div>
+            <img class="separator" src="./Assets/Icons/separator.svg" alt="" />
+            <div class="seconds">
+              <p class="date__num">00</p>
+              <p class="date__p">Segundos</p>
+            </div>
+          </div>
+        </div>
+        <img
+          src="./Assets/img/david-guetta.jpg"
+          alt="Cartel de las actuaciones"
+          class="container__poster"
+        />
+      </div>
+    </main>
+    <footer class="footer">
+      <p class="footer__p">Copyright 2023 &copy; LIVE NATION ESPAÑA, S.A.U.</p>
+      <div class="socials">
+        <a href=""><img src="./Assets/Icons/yt_icon.svg" alt="" /></a>
+        <a href=""><img src="./Assets/Icons/fb_icon.svg" alt="" /></a>
+        <a href=""><img src="./Assets/Icons/ig_icon.svg" alt="" /></a>
+      </div>
+    </footer>
+
+
+    <script src="script.js"></script>
+  </body>
+</html>
