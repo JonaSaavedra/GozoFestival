@@ -27,11 +27,13 @@ body {
   background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
     url(../Assets/img/Gozo25-fondo.png) lightgray 50% / cover no-repeat;
   background-size: cover;
+  background-repeat: no-repeat;
   color: var(--primary-font-color);
   -webkit-font-smoothing: antialiased;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  html, body {
+  height: auto;
+  min-height: 100vh;
+}
 }
 
 body,
@@ -241,7 +243,7 @@ a{
 }
 
 .info__h1 {
-  font-size: 85px;
+  font-size: clamp(45px, 4.43vw, 85px);
 }
 
 .info__p {

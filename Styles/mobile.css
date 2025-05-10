@@ -1,0 +1,92 @@
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    padding: 10px 10px;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  .header__form {
+    position: static;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .button__img--send {
+    position: static;
+    transform: none;
+  }
+  .form__fieldset {
+    position: static;
+    display: flex;
+    flex-direction: column;
+  }
+  .fieldset__email {
+    position: static;
+    animation: none;
+  }
+  .header__button {
+    width: 250px;
+    animation: none;
+  }
+  .header__button--send {
+    position: static;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+  }
+  .header__button--send:hover {
+    .button__img--send {
+      position: static;
+      animation: none;
+    }
+  }
+  .container {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    width: auto;
+  }
+  .container__poster {
+    width: 350px;
+    padding: 10px;
+  }
+  .info {
+    width: auto;
+    height: auto;
+    gap: 50px;
+  }
+  .info__buy {
+    width: 300px;
+  }
+  .info__p {
+    font-size: 13px;
+  }
+  .info__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .date {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    gap: 2vw;
+    width: 100%;
+  }
+  .date__p {
+    font-size: 14px;
+  }
+  .date__num {
+    font-size: 30px;
+  }
+  .separator {
+    height: 30px;
+    align-self: first baseline;
+    padding-top: 16px;
+  }
+}
