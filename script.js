@@ -11,7 +11,7 @@ console.log(fieldset);
 //----------------------TEMPORIZADOR------------------------
 
 //Creo las variables de lastDate, que recoge la fecha final, y now, que recoge la fecha actual.
-const lastDate = new Date("2025/07/06 16:00:00").getTime();
+const lastDate = new Date("2025/07/06 17:30:00").getTime();
 
 function updateCountdown() {
   const now = new Date().getTime();
