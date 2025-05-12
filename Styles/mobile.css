@@ -1,4 +1,4 @@
-@media (max-width: 768px) {
+@media (max-width: 1015px) {
   .header {
     flex-direction: column;
     padding: 10px 10px;
@@ -70,6 +70,9 @@
   .footer {
     flex-direction: column-reverse;
     text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    padding: 10px 10px;
   }
   .date {
     display: flex;
