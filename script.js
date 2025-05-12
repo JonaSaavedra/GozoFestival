@@ -31,10 +31,10 @@ function updateCountdown() {
   const seconds = Math.floor((diff / 1000) % 60);
   //Declaramos las variables del HTML de días, horas, minutos y segundos y asignamos los valores extraídos antes
   const dates = document.querySelectorAll(".date__num");
-  dates[0].innerHTML = days;
-  dates[1].innerHTML = hours;
-  dates[2].innerHTML = minutes;
-  dates[3].innerHTML = seconds;
+  dates[0].innerHTML = days.toString().padStart(2, '0');;
+  dates[1].innerHTML = hours.toString().padStart(2, '0');;
+  dates[2].innerHTML = minutes.toString().padStart(2, '0');;
+  dates[3].innerHTML = seconds.toString().padStart(2, '0');;
 
   let headerInfo = document.querySelector("#info__h1").innerHTML;
 
