@@ -3,7 +3,14 @@
 const fieldset = document.querySelector(".form__fieldset");
 
 function notify() {
-  fieldset.style.display = "flex";
+  const currentDisplay = window.getComputedStyle(fieldset).display;
+
+  if (currentDisplay === "none") {
+    fieldset.style.display = "flex";
+  } else {
+    fieldset.style.display = "none";
+    console.log("hola");
+  }
 }
 
 console.log(fieldset);
@@ -29,25 +36,22 @@ function updateCountdown() {
   dates[2].innerHTML = minutes;
   dates[3].innerHTML = seconds;
 
-  let headerInfo = document.querySelector('#info__h1').innerHTML
+  let headerInfo = document.querySelector("#info__h1").innerHTML;
 
-  if(diff <= 0){
-    dates[0].innerHTML = '00';
-    dates[1].innerHTML = '00';
-    dates[2].innerHTML = '00';
-    dates[3].innerHTML = '00';
-    let headerInfo = document.querySelector('#info__h1').innerHTML = 'Evento finalizado'
-    let infoBuy = document.querySelector('#info__buy')
-    infoBuy.style.backgroundColor = '#F13'
-    infoBuy.removeAttribute('href')
-    infoBuy.style.textDecoration = 'line-through'
+  if (diff <= 0) {
+    dates[0].innerHTML = "00";
+    dates[1].innerHTML = "00";
+    dates[2].innerHTML = "00";
+    dates[3].innerHTML = "00";
+    let headerInfo = (document.querySelector("#info__h1").innerHTML =
+      "Evento finalizado");
+    let infoBuy = document.querySelector("#info__buy");
+    infoBuy.style.backgroundColor = "#F13";
+    infoBuy.removeAttribute("href");
+    infoBuy.style.textDecoration = "line-through";
   }
-
-  
 }
 
 const countDown = setInterval(updateCountdown, 1000);
 
 updateCountdown();
-
-
